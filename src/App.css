@@ -1,0 +1,114 @@
+body {
+  background: url('./assets/images/fundo.png') no-repeat center center fixed; /* Caminho da sua imagem */
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Ajuste conforme necessário */
+}
+
+.content {
+    text-align: center;
+    color: #ffffff;
+    padding: 40px;
+    z-index: 10;
+    position: relative;
+    user-select: none;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  
+  .text-section {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.7); /* Um pouco mais escuro */
+    padding: 30px; /* Aumenta o espaçamento interno */
+    border-radius: 15px; /* Bordas levemente mais arredondadas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+  }
+  
+  .text-section p {
+    margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+  }
+  
+  .text-section p:last-child {
+    margin-bottom: 0; /* Remove o espaço no último parágrafo */
+  }
+  
+  .text-section strong {
+    color: #ffcc00; /* Destaque no texto "Boa sorte!" */
+    font-size: 1.8rem;
+  }
+  
+  .hidden-button-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px; /* Ajuste para garantir que a área seja maior e o botão apareça */
+    height: 100px; /* Ajuste correspondente */
+    overflow: hidden; /* Garante que o botão fique escondido até o hover */
+    z-index: 1000;
+  }
+  
+  .hidden-button-container:hover .resgatar-button {
+    transform: translateX(0); /* Mostra o botão no hover */
+    opacity: 1; /* Torna o botão visível */
+  }
+  
+  .resgatar-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffcc00; /* Dourado */
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(150%); /* Esconde o botão fora da área visível */
+    opacity: 0; /* Torna o botão invisível */
+  }
+  
+  .resgatar-button:hover {
+    background-color: #e6b800; /* Tom mais escuro no hover */
+    transform: translateX(0) scale(1.05); /* Pequeno aumento no hover */
+    opacity: 1; /* Mantém o botão visível no hover */
+  }
+  
+  
+  .timers {
+    margin: 30px auto;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    padding: 20px 30px; /* Espaçamento mais consistente */
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .timers h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; /* Mais espaçamento para separar o título */
+    color: #ffcc00; /* Cor dourada padronizada */
+  }
+  
+  .timers p {
+    font-size: 1.6rem;
+    margin: 10px 0; /* Espaçamento consistente entre os parágrafos */
+    color: #ffffff; /* Cor branca padronizada */
+  }
+  
+  .timers .highlight {
+    color: #ffcc00; /* Destaque para informações importantes */
+    font-weight: bold;
+  }
+  
