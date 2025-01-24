@@ -4,10 +4,10 @@ const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({});
   const [timeTogether, setTimeTogether] = useState({});
 
-  const startDate = new Date('2024-02-13'); // Data de início do relacionamento
+  const startDate = new Date('2024-02-13');
   const [nextAnniversary, setNextAnniversary] = useState(() => {
     const now = new Date();
-    let anniversary = new Date(now.getFullYear(), 1, 13); // 13 de fevereiro
+    let anniversary = new Date(now.getFullYear(), 1, 13);
     if (now > anniversary) {
       anniversary.setFullYear(anniversary.getFullYear() + 1);
     }
@@ -26,7 +26,6 @@ const Countdown = () => {
         segundos: Math.floor((difference / 1000) % 60),
       };
     } else {
-      // Reseta para o próximo ano quando a contagem chegar a zero
       setNextAnniversary((prev) => {
         const newDate = new Date(prev);
         newDate.setFullYear(newDate.getFullYear() + 1);
@@ -67,8 +66,8 @@ const Countdown = () => {
       setTimeTogether(calculateTimeTogether());
     }, 1000);
 
-    return () => clearInterval(timer); // Limpa o intervalo ao desmontar o componente
-  }, [nextAnniversary]); // Atualiza quando o próximo aniversário mudar
+    return () => clearInterval(timer);
+  }, [nextAnniversary]);
 
   return (
     <div className="timers">

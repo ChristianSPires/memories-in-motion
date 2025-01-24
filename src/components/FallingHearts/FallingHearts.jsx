@@ -20,16 +20,13 @@ const FallingHearts = () => {
 
       container.appendChild(heart);
 
-      // Remove o coração após o fim da animação (8s da animação + 2s de atraso máximo)
-      setTimeout(() => heart.remove(), 11000); // 8s + margem de segurança
+      setTimeout(() => heart.remove(), 11000);
 
-      // Cria o próximo coração após 700ms
       setTimeout(createHeart, 700);
     };
 
     createHeart();
 
-    // Limpa os corações ao desmontar o componente
     return () => {
       container.innerHTML = "";
     };

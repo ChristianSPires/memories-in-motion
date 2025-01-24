@@ -4,21 +4,21 @@ import './Popup.css';
 import AmorImage from '../../assets/images/amor_2.jpg';
 
 const Popup = ({ isOpen, onClose }) => {
-  const [selectedOption, setSelectedOption] = useState(null); // Armazena a opção selecionada
-  const [showSecondPopup, setShowSecondPopup] = useState(false); // Controle do segundo pop-up
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [showSecondPopup, setShowSecondPopup] = useState(false);
 
   const handleOptionChange = (option) => {
-    setSelectedOption(option); // Atualiza a opção selecionada
+    setSelectedOption(option);
   };
 
   const handleSubmit = () => {
-    setShowSecondPopup(true); // Mostra o segundo pop-up
+    setShowSecondPopup(true);
   };
 
   const handleClose = () => {
-    setSelectedOption(null); // Reseta a opção selecionada
-    setShowSecondPopup(false); // Garante que o segundo pop-up também seja fechado
-    onClose(); // Fecha o pop-up principal
+    setSelectedOption(null);
+    setShowSecondPopup(false);
+    onClose();
   };
 
   if (!isOpen) return null;
@@ -27,13 +27,11 @@ const Popup = ({ isOpen, onClose }) => {
     <div className="popup-overlay" onClick={handleClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         {showSecondPopup ? (
-          // Conteúdo do segundo pop-up
           <>
             <img src={AmorImage} alt="Special Moment" style={{ maxWidth: '100%' }} />
             <button onClick={handleClose} className="close-button">Fechar</button>
           </>
         ) : (
-          // Conteúdo do primeiro pop-up
           <>
             <h2>¡Ajá! Pero antes tendrás que responder una pregunta crucial.</h2>
             <h3>Quis magis amat?</h3>

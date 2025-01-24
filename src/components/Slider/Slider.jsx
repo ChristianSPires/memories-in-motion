@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules"; // Adicionado o módulo Autoplay
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -32,13 +32,12 @@ const Slider = () => {
           modifier: 2.5,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
-        loopAdditionalSlides={3}
         watchSlidesProgress={true}
         autoplay={{
-          delay: 3000, // 3 segundos entre slides
-          disableOnInteraction: false, // Continua o autoplay mesmo após interação
+          delay: 3000,
+          disableOnInteraction: false,
         }}
-        modules={[EffectCoverflow, Pagination, Autoplay]} // Adicionado o módulo Autoplay
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="swiper_container"
       >
         {photos.map((photo, index) => (
