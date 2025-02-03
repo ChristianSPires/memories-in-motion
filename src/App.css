@@ -14,13 +14,13 @@ body {
     user-select: none;
     overflow: hidden;
   }
-  
+
   h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #ffcc00;
   }
-  
+
   .text-section {
     margin: 20px auto;
     max-width: 800px;
@@ -33,20 +33,20 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  
+
   .text-section p {
     margin-bottom: 15px;
   }
-  
+
   .text-section p:last-child {
     margin-bottom: 0;
   }
-  
+
   .text-section strong {
     color: #ffcc00;
     font-size: 1.8rem;
   }
-  
+
   .hidden-button-container {
     position: fixed;
     bottom: 0;
@@ -56,12 +56,12 @@ body {
     overflow: hidden;
     z-index: 1000;
   }
-  
+
   .hidden-button-container:hover .resgatar-button {
     transform: translateX(0);
     opacity: 1;
   }
-  
+
   .resgatar-button {
     position: absolute;
     bottom: 10px;
@@ -77,13 +77,13 @@ body {
     transform: translateX(150%);
     opacity: 0;
   }
-  
+
   .resgatar-button:hover {
     background-color: #e6b800;
     transform: translateX(0) scale(1.05);
     opacity: 1;
   }
-  
+
   .timers {
     margin: 30px auto;
     text-align: center;
@@ -94,21 +94,20 @@ body {
     max-width: 600px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   }
-  
+
   .timers h2 {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #ffcc00;
   }
-  
+
   .timers p {
     font-size: 1.6rem;
     margin: 10px 0;
     color: #ffffff;
   }
-  
+
   .timers .highlight {
     color: #ffcc00;
     font-weight: bold;
   }
-  
